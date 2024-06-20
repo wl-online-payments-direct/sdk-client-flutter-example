@@ -1,0 +1,35 @@
+name: online_payments_flutter_example
+description: Flutter application demonstrating how to use the Online Payments Flutter SDK
+version: 1.0.0
+
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  online_payments_sdk: ^1.2.0
+
+  online_payments_repository:
+    path: packages/online_payments_repository
+
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  collection: ^1.18.0
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  custom_lint: ^0.6.4
+  riverpod_generator: ^2.4.0
+  riverpod_lint: ^2.3.10
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/

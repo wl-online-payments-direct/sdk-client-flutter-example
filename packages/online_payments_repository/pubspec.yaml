@@ -1,0 +1,25 @@
+name: online_payments_repository
+description: Package that takes care of the business logic of the Online Payments Example
+publish_to: none
+
+dependencies:
+  flutter:
+    sdk: flutter
+  online_payments_sdk: ^1.2.0
+  freezed: ^2.5.2
+  freezed_annotation: ^2.4.1
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  collection: ^1.18.0
+  pay: ^2.0.0
+
+dev_dependencies:
+  build_runner: ^2.4.10
+  custom_lint: ^0.6.4
+  riverpod_generator: ^2.4.0
+  riverpod_lint: ^2.3.10
+  json_serializable: ^6.8.0
+  flutter_lints: ^4.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"

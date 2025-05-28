@@ -2,7 +2,7 @@ PODS:
   - Alamofire (5.9.1)
   - CryptoSwift (1.8.2)
   - Flutter (1.0.0)
-  - online_payments_sdk (1.1.2):
+  - online_payments_sdk (1.3.2):
     - Alamofire
     - CryptoSwift
     - Flutter
@@ -31,9 +31,9 @@ SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   CryptoSwift: c63a805d8bb5e5538e88af4e44bb537776af11ea
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  online_payments_sdk: 2a699b8411561f338cf9929cf404ad24f9906d6b
+  online_payments_sdk: b9423296400b93cc55c91e1055092a37572233f1
   pay_ios: 8c7beb9c61d885f3f51b61f75f8793023fc8843a
 
-PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
+PODFILE CHECKSUM: 83f6a08c58d4b249cda5d50acce1e33fac59623c
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

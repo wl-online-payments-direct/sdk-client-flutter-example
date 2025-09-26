@@ -72,6 +72,7 @@ const String rememberPaymentDetailsLabel =
 const String payButtonLabel = "Pay";
 const String cardPlaceholderLabel = "**** **** **** ****";
 const String expiryDatePlaceholderLabel = "MM/YY";
+const String expiryDateFullYearPlaceholderLabel = "MM/YYYY";
 const String cvvPlaceholderLabel = "123";
 const String securityCodePlaceholderLabel = "123";
 const String cardHolderPlaceholderLabel = "John Doe";

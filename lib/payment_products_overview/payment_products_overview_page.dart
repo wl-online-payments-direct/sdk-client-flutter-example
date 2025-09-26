@@ -9,7 +9,7 @@
  *
  * Please contact Worldline for questions regarding license and user rights.
  */
-import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -138,9 +138,9 @@ class PaymentProductsOverviewPage extends ConsumerWidget {
   ) {
     result.process(onData: (paymentProduct) {
       // This example only shows how to use GooglePay and ApplePay on their respective platforms
-      if (Platform.isAndroid &&
+      if (defaultTargetPlatform == TargetPlatform.android &&
               paymentProduct.id == constants.paymentProductIdGooglePay ||
-          Platform.isIOS &&
+          defaultTargetPlatform == TargetPlatform.iOS &&
               paymentProduct.id == constants.paymentProductIdApplePay) {
         WalletPaymentHelper.startWalletPayment(
           paymentProduct,

@@ -260,7 +260,9 @@ class CardInputState extends _$CardInputState {
     String value, {
     Function? onComplete,
   }) async {
-    final validationErrorMessages = await field.validateValue(value);
+    final paymentProduct = state.paymentProductResult.data as PaymentProduct;
+    final validationErrorMessages =
+        await field.validateValue(value, paymentProduct);
     if (validationErrorMessages.isNotEmpty) {
       final errorMessages = validationErrorMessages.transformIntoStringsList();
       _updateValidationErrorMessages(field.id, errorMessages);

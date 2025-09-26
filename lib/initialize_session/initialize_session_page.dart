@@ -10,7 +10,7 @@
  * Please contact Worldline for questions regarding license and user rights.
  */
 import 'dart:convert';
-import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -68,7 +68,7 @@ class InitializeSessionPage extends ConsumerWidget {
             const _OtherOptionsInput(),
             const DefaultPadding(),
             _ProceedButton(
-              onButtonPressed: () {
+              onButtonPressed: () async {
                 // Validate the input fields
                 if (formKey.currentState?.validate() ?? false) {
                   // Input fields are valid, create Session
@@ -369,7 +369,7 @@ class _OtherOptionsInput extends ConsumerWidget {
         const _RecurringPaymentSwitch(),
         const _EnableLoggingSwitch(),
         // Only show ApplePay on iOS devices
-        if (Platform.isIOS) const _ApplePaySwitch(),
+        if (defaultTargetPlatform == TargetPlatform.iOS) const _ApplePaySwitch(),
         // Only show one _MerchantIdInput if both applePay and googlePay are enabled
         if (applePayEnabled && !googlePayEnabled) ...[
           DefaultPadding.all(size: 5),

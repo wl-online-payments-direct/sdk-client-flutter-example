@@ -334,17 +334,21 @@ class _ExpiryDateFieldState extends ConsumerState<_ExpiryDateField> {
     final cardInputStateProviderNotifier =
         ref.read(cardInputStateProvider.notifier);
 
+    final mask = widget.field.displayHints?.mask ?? "{{99}}/{{99}}";
+    final maxDigits = mask.split("9").length;
+    final useFullYear = maxDigits == 6;
+
     return _FocusTextField(
       childWidget: InputTextFormField(
         label: widget.field.displayHints?.label,
-        hint: strings.expiryDatePlaceholderLabel,
+        hint: useFullYear ? strings.expiryDatePlaceholderLabel: strings.expiryDateFullYearPlaceholderLabel,
         errorText: expiryDateValidationErrorMessages?[0],
         value: maskedValue ?? expiryDate,
         prefixIcon: const Icon(Icons.calendar_month_sharp),
         keyboardType: TextInputType.number,
         textInputFormatters: [
           FilteringTextInputFormatter.digitsOnly,
-          LengthLimitingTextInputFormatter(4)
+          LengthLimitingTextInputFormatter(maxDigits)
         ],
         enabled: expiryDateAttribute?.isEditingAllowed() ?? true,
         onInputChanged: (value) {
